@@ -1,0 +1,15 @@
+/* TEAM */
+Developer: Matt Olson
+Site: http://mattolson.com
+Twitter: @ahbiscuits
+Location: Chico, CA, USA
+
+/* THANKS */
+Middleman: http://middlemanapp.com
+ZURB: http://www.zurb.com/
+Font Awesome: http://fortawesome.github.com/Font-Awesome
+
+/* SITE */
+Standards: HTML5, CSS3
+Components: ZURB Foundation, Modernizr, jQuery
+
