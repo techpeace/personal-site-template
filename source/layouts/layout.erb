@@ -19,7 +19,7 @@
     <meta http-equiv="cleartype" content="on">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 
-    <title><%= data.page.title || "Matt Olson" %></title>
+    <title><%= data.page.title || "My Blog" %></title>
 
     <%= stylesheet_link_tag "application" %>
     <%= yield_content :stylesheets %>
@@ -42,10 +42,10 @@
     <!-- Logo & Top Nav -->
     <div class="row">
       <div class="three columns">
-        <h1><%= link_to image_tag('http://placehold.it/250x75&text=Matt+Olson'), '/' %></h1>
+        <h1><%= link_to image_tag('http://placehold.it/250x75&text=My+Blog'), '/' %></h1>
       </div>
       <div class="nine columns">
-        <ul class="link-list right auth-nav">
+        <ul class="link-list right">
         </ul>
       </div>
     </div>
@@ -53,8 +53,34 @@
 
     <!-- Main page container -->
     <div class="row">
-      <div class="twelve columns page">
-        <%= yield %>
+      <div class="twelve columns">
+        <div class="eight columns">
+          <%= yield %>
+        </div>
+        <div class="four columns">
+          <aside>
+            <h3>Recent Articles</h3>
+            <ol>
+              <% blog.articles[0...10].each do |article| %>
+                <li><a href="<%= article.url %>"><%= article.title %></a> <span><%= article.date.strftime('%b %e') %></span></li>
+              <% end %>
+            </ol>
+
+            <h3>Tags</h3>
+            <ol>
+              <% blog.tags.each do |tag, articles| %>
+                <li><a href="<%= tag_path tag %>"><%= tag %> (<%= articles.size %>)</a></li>
+              <% end %>
+            </ol>
+
+            <h3>By Year</h3>
+            <ol>
+              <% blog.articles.group_by {|a| a.date.year }.each do |year, articles| %>
+                <li><a href="<%= blog_year_path year %>"><%= year %> (<%= articles.size %>)</a></li>
+              <% end %>
+            </ol>
+          </aside>
+        </div>
       </div>
     </div>
 
