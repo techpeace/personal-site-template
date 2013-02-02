@@ -1,11 +1,12 @@
 /* TEAM */
-Developer: Matt Olson
-Site: http://mattolson.com
-Twitter: @ahbiscuits
-Location: Chico, CA, USA
+Developer: My name
+Site: http://mysite.com
+Twitter: @myhandle
+Location: Any town, USA
 
 /* THANKS */
 Middleman: http://middlemanapp.com
+Middleman ZURB Template: https://github.com/mattolson/middleman-zurb-template
 ZURB: http://www.zurb.com/
 Font Awesome: http://fortawesome.github.com/Font-Awesome
 FancyBox: http://fancybox.net/
