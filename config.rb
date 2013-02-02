@@ -7,7 +7,7 @@ require 'kramdown'
 Time.zone = "America/Los_Angeles"
 
 activate :blog do |blog|
-  blog.prefix = ""
+  blog.prefix = "/blog"
   blog.permalink = ":year/:month/:day/:title.html"
   blog.sources = ":year-:month-:day-:title.html"
   blog.taglink = "tags/:tag.html"
@@ -19,15 +19,15 @@ activate :blog do |blog|
   blog.day_link = ":year/:month/:day.html"
   blog.default_extension = ".markdown"
 
-  blog.tag_template = "tag.html"
-  blog.calendar_template = "calendar.html"
+  blog.tag_template = "/blog/tag.html"
+  blog.calendar_template = "/blog/calendar.html"
 
   blog.paginate = true
   blog.per_page = 5
   blog.page_link = "page/:num"
 end
 
-page "/feed.xml", :layout => false
+page "/blog/feed.xml", :layout => false
 
 ###
 # Compass
@@ -46,11 +46,10 @@ page "/feed.xml", :layout => false
 # Page options, layouts, aliases and proxies
 ###
 
-# Per-page layout changes:
-#
 # With no layout
-# page "/path/to/file.html", :layout => false
-#
+page "robots.txt", :layout => false
+page "humans.txt", :layout => false
+
 # With alternative layout
 # page "/path/to/file.html", :layout => :otherlayout
 #
@@ -79,9 +78,7 @@ page "/feed.xml", :layout => false
 # end
 
 set :css_dir, 'stylesheets'
-
 set :js_dir, 'javascripts'
-
 set :images_dir, 'images'
 
 # Build-specific configuration

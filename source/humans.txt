@@ -8,8 +8,9 @@ Location: Chico, CA, USA
 Middleman: http://middlemanapp.com
 ZURB: http://www.zurb.com/
 Font Awesome: http://fortawesome.github.com/Font-Awesome
+FancyBox: http://fancybox.net/
 
 /* SITE */
 Standards: HTML5, CSS3
-Components: ZURB Foundation, Modernizr, jQuery
+Components: ZURB Foundation, jQuery, Font Awesome, FancyBox, Compass, respond.js, html5 shiv
 

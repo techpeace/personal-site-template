@@ -1,23 +1,3 @@
-/* Body */
-body {
-  background-color: #e9e9e9;
-}
-
-/* Page container */
-div.page {
-  border: 1px solid #dfdfdf;
-  @include border-radius(7px);
-  @include box-shadow(0px 0px 6px 0px #c1c1c1);
-  background-color: #fff;
-  margin: 1em;
-  padding: 20px;
-}
-
-/* Auth links */
-ul.link-list.auth-nav {
-  padding-top: 1em;
-}
-
 /* IE upgrade overlay */
 #ie-warning-overlay {
   position: absolute; 
@@ -86,112 +66,12 @@ ul.link-list.auth-nav {
   }
 }
 
-/* Error & notice flashes */
-div.alert-box {
-  h1 {
-    width: 1em;
-    margin: 0 0.25em;
-    float: left;
-  }
-  a.close {
-    top: 3px;
-    color: $black;
-  }
-}
-
-/* Forms */
-form div.actions {
-  margin-top: 1em;
-}
-
-form label.boolean {
-  display: inline-block;
-  margin-left: 0.5em;
-}
-
-fieldset {
-  border: none;
-}
-
-span.hint {
-  display: block;
-  width: 100%;
-  padding: 0.5em;
-  margin-top: -12px;
-  margin-bottom: 1em;
-  border-left: 1px dotted #a1a1a1;
-  border-right: 1px dotted #a1a1a1;
-  border-bottom: 1px dotted #a1a1a1;
-  background-color: #f1f1f1;
-  font-style: italic;
-}
-
 /* Lists */
 ul.plain, ol.plain {
   list-style: none;
+  padding-left: 0;
   li {
     margin-top: 0.5em;
-  }
-}
-
-/* File inputs */
-.upload-picture-wrapper .button {
-  margin-top: 1em;
-}
-
-.file-input-wrapper {
-  cursor: pointer;
-  display: inline-block;
-  overflow: hidden;
-  position: relative;
-
-  input {
-    cursor: pointer;
-    font-size: 100px;
-    height: 100%;
-    filter: alpha(opacity=1);
-    -moz-opacity: 0.01;
-    opacity: 0.01;
-    position: absolute;
-    right: 0;
-    top: 0;
-    z-index: 50;
-  }
-
-  a {
-    z-index: 0;
-  }
-}
-
-/* Ajax spinners */
-.ajax-spinner {
-  display: none;
-  width: 32px;
-  height: 32px;
-  z-index: 100;
-  overflow: hidden;
-  font-size: 32px;
-  color: #007d1c;
-  img, i {
-    display: none;
-  }
-}
-
-/* Icon buttons */
-.icon-button-group {
-  .icon-button {
-    margin-right: 0.8em;
-  }
-}
-
-.icon-button {
-  font-size: 24px;
-  color: #000;
-  &.small {
-    font-size: 14px;
-  }
-  &:hover {
-    color: #444;
   }
 }
 
@@ -199,9 +79,3 @@ ul.plain, ol.plain {
 .clear {
   clear: both;
 }
-
-span.cancel-link {
-  margin-left: 1.5em;
-  font-size: 1.1em;
-}
-
