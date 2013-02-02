@@ -12,3 +12,8 @@
 
 # Ignore Sass' cache
 /.sass-cache
+
+# Ignore rbenv directives
+.rbenv-version
+.rbenv-gemsets
+
