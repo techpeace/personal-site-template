@@ -20,8 +20,10 @@ This is a template for the excellent [Middleman](http://middlemanapp.com/) stati
 Clone into `~/.middleman` (you'll have to create it if it doesn't exist). You can then use it with the `--template` flag on `middleman init`.
 
 1. `mkdir -p ~/.middleman`
-1. `git clone git://github.com/mattolson/middleman-zurb-template.git ~/.middleman/zurb-foundation`
-2. `middleman init my_new_project --template=zurb-foundation`
+2. `git clone git://github.com/mattolson/middleman-zurb-template.git ~/.middleman/zurb-foundation`
+3. `middleman init my_new_project --template=zurb-foundation`
+4. `cd my_new_project && bundle install`
+5. `middleman server`
 
 For more help follow [Middleman's project template instructions](http://middlemanapp.com/getting-started/) or feel to ask me on [Twitter](http://twitter.com/ahbiscuits).
 

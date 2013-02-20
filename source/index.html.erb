@@ -1,21 +1,19 @@
 ---
 pageable: true
-per_page: 10
 ---
-<% page_articles.each_with_index do |article, i| %>
-  <h3><%= link_to article.title, article %></h3>
-  <p><%= article.date.strftime('%b %e') %></p>
-  <p><%= article.summary %></p>
-<% end %>
-
-<% if paginate %>
-  <% if prev_page %>
-    <p><%= link_to 'Previous page', prev_page %></p>
+<div class="articles">
+  <% page_articles.each_with_index do |article, i| %>
+    <% if i > 0 %>
+      <hr />
+    <% end %>
+    <%= partial '/blog/article', :locals => {:article => article, :digest => true} %>
   <% end %>
+</div>
 
-  <p>Page <%= page_number %> of <%= num_pages %></p>
-
-  <% if next_page %>
-    <p><%= link_to 'Next page', next_page %></p>
-  <% end %>
-<% end %>
+<%= partial '/blog/pagination', :locals => {
+  :paginate => paginate, 
+  :next_page => next_page, 
+  :prev_page => prev_page,
+  :num_pages => num_pages,
+  :page_number => page_number
+} %>

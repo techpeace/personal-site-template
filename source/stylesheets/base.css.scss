@@ -79,3 +79,52 @@ ul.plain, ol.plain {
 .clear {
   clear: both;
 }
+
+/* Blog articles */
+div.articles {
+  hr {
+    margin: 2em 0 3em 0;
+    border-color: #e1e1e1;
+    border-style: dotted;     
+  }
+}  
+
+ul.read_next {                
+  list-style: none;           
+  border-top: 1px solid #e1e1e1;  
+  padding-top: 1em;
+  margin-top: 2em;
+  li { 
+    margin: 0;
+    padding: 0;
+    width: 50%;
+    float: left;
+    font-size: 12px;
+    font-weight: bold;
+    color: #333;
+    a {
+      text-transform: uppercase;      
+    }
+    &:last-child {
+      text-align: right;
+    }
+  }
+}
+
+aside {
+  ul {
+    list-style: none;
+  }
+
+  ul.credit{
+    margin-top: 0px;
+    time {
+      display: block;
+    }
+  }
+
+  ul.tags li {
+    display: inline;
+  }
+}
+

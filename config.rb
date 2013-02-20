@@ -11,7 +11,7 @@ activate :blog do |blog|
   blog.permalink = ":year/:month/:day/:title.html"
   blog.sources = ":year-:month-:day-:title.html"
   blog.taglink = "tags/:tag.html"
-  blog.layout = "layout"
+  blog.layout = "article"
   blog.summary_separator = /(READMORE)/
   blog.summary_length = 250
   blog.year_link = ":year.html"
@@ -77,17 +77,18 @@ page "humans.txt", :layout => false
 #   end
 # end
 
+# Generate sitemap after build
+activate :sitemap_generator 
+
 set :css_dir, 'stylesheets'
 set :js_dir, 'javascripts'
 set :images_dir, 'images'
 
 # Build-specific configuration
 configure :build do
-  # For example, change the Compass output style for deployment
-  # activate :minify_css
 
-  # Minify Javascript on build
-  # activate :minify_javascript
+  activate :minify_css        
+  activate :minify_javascript
 
   # Enable cache buster
   # activate :cache_buster
