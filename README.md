@@ -37,4 +37,4 @@ This template is still a good starting point for sites that don't require bloggi
 3. Remove middleman-blog from Gemfile.
 4. Remove styles from source/stylesheets/base.css.scss. They are all at the bottom of the file grouped together under the header "Blog Articles".
 5. Remove settings from config.rb. They are all grouped at the top under the header "Blog Settings".
-
+6. Update the home page (source/index.html.erb) to do something more relevant to your site.
