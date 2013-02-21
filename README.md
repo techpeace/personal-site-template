@@ -12,7 +12,8 @@ This is a template for the excellent [Middleman](http://middlemanapp.com/) stati
 * [jQuery 1.9.0](http://jquery.com/)
 * Many elements and defaults from [HTML5 Boilerplate](http://html5boilerplate.com/)
 * A warning overlay presented to older browsers
-* [Google Analytics](http://www.google.com/analytics/)
+* [Google Analytics](http://www.google.com/analytics/) integration
+* Automatic XML Sitemap creation on build
 * A sensible starter layout for a blog. You will most likely want to make numerous changes to the styling - I didn't make any assumptions about the design. Don't judge it on its looks, this isn't a blog theme, it is meant to be a foundation to build on.
 
 ## Installation
