@@ -1,4 +1,5 @@
 require 'kramdown'
+require 'extensions/sitemap.rb'
 
 ###
 ## Blog settings
