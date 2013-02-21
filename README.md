@@ -28,3 +28,13 @@ Clone into `~/.middleman` (you'll have to create it if it doesn't exist). You ca
 
 For more help follow [Middleman's project template instructions](http://middlemanapp.com/getting-started/) or feel to ask me on [Twitter](http://twitter.com/ahbiscuits).
 
+## Removing blog functionality
+
+This template is still a good starting point for sites that don't require blogging functions. To remove blog-specific stuff:
+
+1. `git rm source/blog/*`
+2. `git rm source/layouts/article.erb`
+3. Remove middleman-blog from Gemfile.
+4. Remove styles from source/stylesheets/base.css.scss. They are all at the bottom of the file grouped together under the header "Blog Articles".
+5. Remove settings from config.rb. They are all grouped at the top under the header "Blog Settings".
+
