@@ -65,6 +65,7 @@ GEM
       sprockets-helpers (~> 1.0.0)
       sprockets-sass (~> 1.0.0)
     multi_json (1.7.5)
+    nokogiri (1.5.9)
     padrino-core (0.10.7)
       activesupport (~> 3.2.0)
       http_router (~> 0.10.2)
@@ -119,6 +120,7 @@ DEPENDENCIES
   kramdown
   middleman (~> 3.0.14)
   middleman-blog (~> 3.2.0)
+  nokogiri
   sitemap_generator
   tzinfo
   zurb-foundation
