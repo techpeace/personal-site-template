@@ -41,10 +41,10 @@
 
     <!-- Logo & Top Nav -->
     <div class="row">
-      <div class="three columns">
+      <div class="small-3 large-3 columns">
         <h1><%= link_to image_tag('http://placehold.it/250x75&text=My+Blog'), '/' %></h1>
       </div>
-      <div class="nine columns">
+      <div class="small-9 large-9 columns">
         <ul class="link-list right">
         </ul>
       </div>
@@ -53,18 +53,18 @@
 
     <!-- Main page container -->
     <div class="row">
-      <div class="twelve columns">
+      <div class="small-12 large-12 columns">
         <%= yield %>
       </div>
     </div>
 
     <!-- Footer -->
     <footer class="row">
-      <div class="six columns">
+      <div class="small-12 large-6 columns left">
         <p>&copy; Copyright <%= Date.today.year.to_s %> MySite</p>
       </div>
-      <div class="six columns">
-        &nbsp;
+      <div class="small-12 large-6 columns right">
+        <i class="icon-heart"></i> Gimme some love.
       </div>
     </footer>
 

@@ -1,5 +1,5 @@
 <div class="row">
-  <article class="nine columns">
+  <article class="small-12 large-9 columns left">
     <h3>
       <% if digest %>
         <%= link_to article.title, article %>
@@ -19,11 +19,6 @@
     <% end %>
 
     <% unless digest %>
-      <ul class="read_next">
-        <li><%= article.previous_article ? link_to("&laquo; #{article.previous_article.title}", article.previous_article) : "&nbsp;" %></li>
-        <li><%= article.next_article ? link_to("#{article.next_article.title} &raquo;", article.next_article) : "&nbsp;" %></li>
-      </ul>
-
       <div id="disqus_thread"></div>
       <script type="text/javascript">
         var disqus_shortname = '';
@@ -37,7 +32,7 @@
       <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
     <% end %>
   </article>
-  <aside class="three columns">
+  <aside class="small-12 large-3 columns right">
     <ul class="credit">
       <li class="time">Posted on <time datetime="<%= article.date.strftime('%Y-%m-%d') %>"><%= article.date.strftime('%A %b %e, %Y') %></time></li>
     </ul>
@@ -48,3 +43,17 @@
     </ul>
   </aside>
 </div>
+
+<% unless digest %>
+  <div class="row">
+    <section class="small-12 large-8 columns">
+      <% if article.previous_article %>
+        <div class="left"><%= link_to("<i class='icon-caret-left'></i> #{article.previous_article.title}", article.previous_article) %></div>
+      <% end %>
+      
+      <% if article.next_article %>
+        <div class="right"><%= link_to("#{article.next_article.title} <i class='icon-caret-right'></i>", article.next_article) %></div>
+      <% end %>
+    </section>
+  </div>
+<% end %> 
