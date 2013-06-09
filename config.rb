@@ -1,6 +1,11 @@
 require 'kramdown'
 require 'extensions/sitemap.rb'
 
+
+activate :sprockets
+require 'compass'
+require 'zurb-foundation'
+
 ###
 ## Blog settings
 ####
