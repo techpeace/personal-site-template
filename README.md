@@ -1,6 +1,8 @@
 # middleman-zurb-template
 
-This is a template for the excellent [Middleman](http://middlemanapp.com/) static site generator that incorporates several foundational components and reasonable defaults for building out a blog. As with all Middleman templates, using [Bundler](http://gembundler.com/) and [rbenv](https://github.com/sstephenson/rbenv/) is recommended.
+This is a [template](http://middlemanapp.com/getting-started/#toc_6) for the excellent [Middleman](http://middlemanapp.com/) static site generator that incorporates 
+several foundational components and reasonable defaults for building out a blog. As with all Middleman templates, using [Bundler](http://gembundler.com/) 
+and [rbenv](https://github.com/sstephenson/rbenv/) is recommended.
 
 ## Features
 
@@ -38,3 +40,10 @@ This template is still a good starting point for sites that don't require bloggi
 4. Remove styles from source/stylesheets/base.css.scss. They are all at the bottom of the file grouped together under the header "Blog Articles".
 5. Remove settings from config.rb. They are all grouped at the top under the header "Blog Settings".
 6. Update the home page (source/index.html.erb) to do something more relevant to your site.
+
+## Examples
+
+Two sites that I know of that use this template as a starting point (if there are more, let me know!):
+* My blog: [Matt Olson](http://mattolson.com)
+* My company's site: [Ruby Cloud](http://rubycloud.com)
+
