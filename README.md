@@ -8,8 +8,7 @@ and [rbenv](https://github.com/sstephenson/rbenv/) is recommended.
 
 * [middleman-blog 3.2](https://github.com/middleman/middleman-blog)
 * [Zurb Foundation 4.2](http://foundation.zurb.com/)
-* [Font Awesome](http://fortawesome.github.com/Font-Awesome)
-* [respond.js](https://github.com/scottjehl/Respond)
+* [Font Awesome 3.2](http://fortawesome.github.com/Font-Awesome)
 * Many elements and defaults from [HTML5 Boilerplate](http://html5boilerplate.com/)
 * A warning overlay presented to older IE browsers (< IE9)
 * [Google Analytics](http://www.google.com/analytics/) integration
@@ -36,8 +35,8 @@ This template is still a good starting point for sites that don't require bloggi
 1. `git rm source/blog/*`
 2. `git rm source/layouts/article.erb`
 3. Remove middleman-blog from Gemfile.
-4. Remove styles from source/stylesheets/base.css.scss. They are all at the bottom of the file grouped together under the header "Blog Articles".
-5. Remove settings from config.rb. They are all grouped at the top under the header "Blog Settings".
+4. Remove blog-related styles from source/stylesheets/base.css.scss. They are all at the bottom of the file grouped together under the header "Blog Articles".
+5. Remove blog-related settings from config.rb. They are all grouped at the top under the header "Blog Settings".
 6. Update the home page (source/index.html.erb) to do something more relevant to your site.
 
 ## Examples
