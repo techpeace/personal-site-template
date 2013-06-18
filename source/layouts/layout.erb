@@ -19,7 +19,7 @@
 
     <title><%= data.page.title || "My Blog" %></title>
 
-    <%= stylesheet_link_tag "//netdna.bootstrapcdn.com/font-awesome/3.2.0/css/font-awesome.min.css" %>
+    <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.0/css/font-awesome.min.css" media="screen" rel="stylesheet" type="text/css" />
     <%= stylesheet_link_tag "application" %>
     <%= yield_content :stylesheets %>
 
@@ -111,8 +111,8 @@
 
     <script>
       document.write('<script src=' +
-        ('__proto__' in {} ? "<%= asset_path 'vendor/zepto' %>" : "<%= 'vendor/jquery' %>") +
-        '.js><\/script>')
+        ('__proto__' in {} ? "<%= asset_path :js, 'vendor/zepto' %>" : "<%= asset_path :js, 'vendor/jquery' %>") +
+        '><\/script>')
     </script>
 
     <!-- Javascript -->

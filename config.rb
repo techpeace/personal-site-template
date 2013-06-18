@@ -1,9 +1,18 @@
 require 'kramdown'
 require 'extensions/sitemap.rb'
+require 'zurb-foundation'
 
 activate :sprockets
-require 'compass'
-require 'zurb-foundation'
+
+# Unfortunately ZURB puts its assets in unconventional paths, so we need to
+# manually add these paths for sprockets to find them. However, the following
+# only works within the middleman server but there doesn't seem to be any
+# way to get sprockets to export the vendored assets within the foundation
+# gem to the build directory because of the non-standard naming of the directories.
+# Keeping this here for reference though.
+#Gem.loaded_specs.values.map(&:full_gem_path).each do |root_path|
+#  ["js", "scss"].map {|p| File.join(root_path, p) }.select {|p| File.directory?(p) }.each {|p| sprockets.append_path(p)}
+#end
 
 ###
 ## Blog settings
