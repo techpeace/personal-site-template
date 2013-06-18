@@ -13,6 +13,7 @@ and [rbenv](https://github.com/sstephenson/rbenv/) is recommended.
 * Many elements and defaults from [HTML5 Boilerplate](http://html5boilerplate.com/)
 * A warning overlay presented to older IE browsers (< IE9)
 * [Google Analytics](http://www.google.com/analytics/) integration
+* [Disqus](http://disqus.com/) integration
 * Automatic XML Sitemap creation on build
 * A sensible mobile-first starter layout for a blog. You will most likely want to make numerous changes to the styling - I didn't make any assumptions about the design. Don't judge it on its looks, this isn't a blog theme, it is meant to be a foundation to build on.
 
