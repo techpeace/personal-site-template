@@ -1,8 +1,7 @@
-source :rubygems
+source 'https://rubygems.org'
 
-gem "middleman", "~>3.0.14"
+gem "middleman", "~> 3.1.0"
 gem "middleman-blog", "~> 3.2.0"
-gem 'middleman-sprockets', "~> 3.1.1"
 gem "kramdown"
 gem "builder", "~> 3.0.0"
 gem "zurb-foundation" , '~> 4.2.2', require: false
