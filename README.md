@@ -9,9 +9,8 @@ and [rbenv](https://github.com/sstephenson/rbenv/) is recommended.
 * [middleman-blog](https://github.com/middleman/middleman-blog)
 * [Zurb Foundation](http://foundation.zurb.com/)
 * [Font Awesome](http://fortawesome.github.com/Font-Awesome)
-* [FancyBox](http://fancybox.net/)
 * [respond.js](https://github.com/scottjehl/Respond)
-* [jQuery 1.9.0](http://jquery.com/)
+* [jQuery 1.10.1](http://jquery.com/)
 * Many elements and defaults from [HTML5 Boilerplate](http://html5boilerplate.com/)
 * A warning overlay presented to older browsers
 * [Google Analytics](http://www.google.com/analytics/) integration

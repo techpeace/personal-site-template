@@ -29,11 +29,6 @@
         <%= yield_content :styles %>
       </style>
     <% end %>
-    
-    <!-- IE backporting -->
-    <!--[if lt IE 9]>
-      <%= javascript_include_tag "html5" %>
-    <![endif]-->
 
     <%= yield_content :head %>
   </head>
@@ -41,10 +36,10 @@
 
     <!-- Logo & Top Nav -->
     <div class="row">
-      <div class="small-3 large-3 columns">
+      <div class="small-3 columns">
         <h1><%= link_to image_tag('http://placehold.it/250x75&text=My+Blog'), '/' %></h1>
       </div>
-      <div class="small-9 large-9 columns">
+      <div class="small-9 columns">
         <ul class="link-list right">
         </ul>
       </div>
@@ -53,25 +48,25 @@
 
     <!-- Main page container -->
     <div class="row">
-      <div class="small-12 large-12 columns">
+      <div class="small-12 columns">
         <%= yield %>
       </div>
     </div>
 
     <!-- Footer -->
     <footer class="row">
-      <div class="small-12 large-6 columns left">
+      <div class="small-12 large-6 columns">
         <p>&copy; Copyright <%= Date.today.year.to_s %> MySite</p>
       </div>
-      <div class="small-12 large-6 columns right">
-        <i class="icon-heart"></i> Gimme some love.
+      <div class="small-12 large-6 columns">
+        <p class="right"><i class="icon-heart"></i> Gimme some love.</p>
       </div>
     </footer>
 
-    <!--[if lt IE 8]>
+    <!--[if lt IE 9]>
     <div id="ie-warning-overlay">
       <div id="ie-warning">
-        <h1>Did you know that your copy of Internet Explorer is out of date?</h1>
+        <h1>Did you know that your copy of Internet Explorer is terribly out of date?</h1>
         <p>
           To get the best possible experience using our website, we recommend that you upgrade to the latest version or use another web browser. 
           Any of the following will provide a superior experience, not only on this site, but across the web.
@@ -81,7 +76,7 @@
           <li>
             <a href="http://microsoft.com/ie">
               <%= image_tag 'browser_ie.gif', :alt => "Download Internet Explorer" %>
-              <p>Internet Explorer 8+</p>
+              <p>Internet Explorer 9+</p>
             </a>
           </li>
           <li>
@@ -122,11 +117,13 @@
     <%= yield_content :javascripts %>
 
     <script type="text/javascript">
-      $(document).ready(function () {
-        imgSizer.collate();
-        <%= yield_content :onready %>
-      });
+      <% if content_for? :onready %>
+        $(document).ready(function () {
+          <%= yield_content :onready %>
+        });
+      <% end %>
 
+      // TODO: Set your Google Analytics code here
       var _gaq=[['_setAccount','UA-'],['_trackPageview']];
       (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';s.parentNode.insertBefore(g,s)}(document,'script'));
     </script>
