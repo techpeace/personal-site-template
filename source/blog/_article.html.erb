@@ -19,6 +19,11 @@
     <% end %>
 
     <% unless digest %>
+      <ul class="read_next">
+        <li><%= article.previous_article ? link_to("<i class='icon-caret-left'></i> #{article.previous_article.title}", article.previous_article) : "&nbsp;" %></li>
+        <li><%= article.next_article ? link_to("#{article.next_article.title} <i class='icon-caret-right'></i>", article.next_article) : "&nbsp;" %></li>
+      </ul>
+
       <div id="disqus_thread"></div>
       <script type="text/javascript">
         var disqus_shortname = '';
@@ -44,16 +49,3 @@
   </aside>
 </div>
 
-<% unless digest %>
-  <div class="row">
-    <section class="small-12 large-8 columns">
-      <% if article.previous_article %>
-        <div class="left"><%= link_to("<i class='icon-caret-left'></i> #{article.previous_article.title}", article.previous_article) %></div>
-      <% end %>
-      
-      <% if article.next_article %>
-        <div class="right"><%= link_to("#{article.next_article.title} <i class='icon-caret-right'></i>", article.next_article) %></div>
-      <% end %>
-    </section>
-  </div>
-<% end %> 
