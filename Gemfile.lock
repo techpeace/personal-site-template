@@ -101,7 +101,6 @@ PLATFORMS
 
 DEPENDENCIES
   builder (~> 3.0.0)
-  compass
   forgery
   kramdown
   middleman (~> 3.1.0)
