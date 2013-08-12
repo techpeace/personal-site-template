@@ -125,6 +125,7 @@ PLATFORMS
 
 DEPENDENCIES
   builder (~> 3.0.0)
+  compass
   forgery
   guard-livereload
   kramdown
