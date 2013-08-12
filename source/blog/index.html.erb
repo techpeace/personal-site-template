@@ -1,0 +1,19 @@
+---
+pageable: true
+---
+<div class="articles">
+  <% page_articles.each_with_index do |article, i| %>
+    <% if i > 0 %>
+      <hr />
+    <% end %>
+    <%= partial '/blog/article', :locals => {:article => article, :digest => true} %>
+  <% end %>
+</div>
+
+<%= partial '/blog/pagination', :locals => {
+  :paginate => paginate, 
+  :next_page => next_page, 
+  :prev_page => prev_page,
+  :num_pages => num_pages,
+  :page_number => page_number
+} %>

@@ -36,15 +36,26 @@
   <body>
 
     <!-- Logo & Top Nav -->
-    <div class="row">
-      <div class="small-3 columns">
-        <h1><%= link_to image_tag('http://placehold.it/250x75&text=My+Blog'), '/' %></h1>
-      </div>
-      <div class="small-9 columns">
-        <ul class="link-list right">
-        </ul>
-      </div>
-    </div>
+    <nav class="top-bar">
+      <ul class="title-area">
+        <!-- Title Area -->
+        <li class="name">
+          <h1><a href="/"><%= full_name %></a></h1>
+        </li>
+        <!-- Remove the class "menu-icon" to get rid of menu icon. Take out "Menu" to just have icon alone -->
+        <li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
+      </ul>
+      <section class="top-bar-section">
+      <!-- Left Nav Section -->
+      <ul class="right">
+        <li class="divider"></li>
+        <li class="active"><a href="#">Portfolio</a></li>
+        <li class="divider"></li>
+        <li><a href="#">Résumé</a></li>
+        <li class="divider"></li>
+        <li><a href="blog">Blog</a></li>
+      </ul>
+    </nav>
     <!-- End Header and Nav -->
 
     <!-- Main page container -->
@@ -56,11 +67,8 @@
 
     <!-- Footer -->
     <footer class="row">
-      <div class="small-12 large-6 columns">
-        <p>&copy; Copyright <%= Date.today.year.to_s %> My Blog</p>
-      </div>
-      <div class="small-12 large-6 columns">
-        <p class="right"><i class="icon-heart"></i> <%= link_to 'Gimme some love.', 'http://github.com/mattolson' %></p>
+      <div class="small-12 columns">
+        <p>Built with <i class="icon-heart"></i> in <%= hometown %> by <%= link_to full_name, "http://github.com/#{github_username}" %></p>
       </div>
     </footer>
 

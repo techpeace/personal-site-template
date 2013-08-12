@@ -18,6 +18,10 @@ activate :sprockets
 ## Blog settings
 ####
 
+set :full_name, "Ada Lovelace"
+set :hometown, "London, England"
+set :github_username, "ada"
+
 Time.zone = "America/Los_Angeles"
 
 activate :blog do |blog|
