@@ -2,23 +2,71 @@
 
 This is a template for your own personal site including a portfolio, blog, and résumé. It is based on the fantastic [middleman-zurb-template](https://github.com/mattolson/middleman-zurb-template) project.
 
+## Installation
+
+**NOTE:** The following instructions assume that you'll be using GitHub Pages personal sites as your host. You'll want to go ahead and clone down your personal site repo first, and then delete it from GitHub. Now go ahead and create a new one (username.github.io).
+
+Go ahead and grab a copy of the code for the site and install the bundle:
+
+```console
+git clone https://github.com/makersquare/personal-site-template.git username.github.io
+cd username.github.io
+bundle install
+```
+
+If you haven't already, create your personal site repo on GitHub (be sure it has the name username.github.io, where username is your GitHub username. Now run the following setup rake task:
+
+```console
+bundle exec rake setup_github_pages
+```
+
+It will ask you to paste in the git URL for your personal site repo. Personal sites use the master branch, so this rake task will rename your master branch to source. Go ahead and push up the code for your site:
+
+```console
+git push origin source
+```
+
+Now generate and deploy the site:
+
+```console
+bundle exec middleman build
+bundle exec middleman deploy
+```
+
+After a few minutes, your site should be live.
+
 ## Configuration
 
-### Resume
+Most of the site can be configured via altering values in the `config.rb` file.
+
+### Résumé
+
+Drop a PDF of your résumé in the source directory. Now set `resume` to the name of the file. A link will appear in the top navigation bar.
 
 ### Social Networking Links
 
+Under the "Social Network link settings" section of `config.rb`, reset the values to point at your social networking accounts, or set them to nil to leave them out of the navigation.
+
 ### Projects
+
+You can highlight your projects with the portfolio section of the site. Use the `data/projects.yaml` file as a template for listing a description of each of your projects. They will automatically 
 
 #### Taking Screenshots
 
+Use Safari to view a live version of your project. Press command-shift-4-space, then click on the Safari window to save a screenshot to the Desktop. Now open the screenshot in Preview, and resize the image to 50% of its original size. Now drop the image file into `source/images`.
+
+
 ### Disqus integration (for blog)
+
+Create a Disqus account for your blog, and set the `disqus_shortname` variable in `config.rb` to the shortname for your blog.
 
 ### Google Analytics integration
 
-### Basics
+Create a Google Analytics account, and set the `google_analytics_tracking_id` appropriately.
 
 ### Blogging
+
+Refer to [the middleman-blog docs](http://middlemanapp.com/blogging/) for information on using the blog.
 
 #### Removing blog functionality
 
@@ -38,7 +86,12 @@ section.latest-from-blog, section.featured-project {
 }
 ```
 
-http://middlemanapp.com/blogging/
-
 ## Deploying
+
+To deploy, just run the following again:
+
+```console
+bundle exec middleman build
+bundle exec middleman deploy
+```
 
