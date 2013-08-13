@@ -17,7 +17,7 @@
     <meta http-equiv="cleartype" content="on">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 
-    <title><%= data.page.title || "My Blog" %></title>
+    <title><%= full_name + ' | ' + data.page.title || full_name %></title>
 
     <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.0/css/font-awesome.min.css" media="screen" rel="stylesheet" type="text/css" />
     <%= stylesheet_link_tag "application" %>
@@ -80,11 +80,11 @@
             "http://github.com/#{github_username}"
           ) %>
           <li class="divider"></li>
-          <li><a href="#">Portfolio</a></li>
+          <li class="portfolio"><a href="portfolio">Portfolio</a></li>
           <li class="divider"></li>
-          <li><a href="#">Résumé</a></li>
+          <li class="resume"><a href="resume">Résumé</a></li>
           <li class="divider"></li>
-          <li><a href="blog">Blog</a></li>
+          <li class="blog"><a href="blog">Blog</a></li>
         </ul>
       </nav>
       <!-- End Header and Nav -->

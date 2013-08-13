@@ -1,0 +1,22 @@
+---
+title: Portfolio
+---
+
+<h2>My Portfolio</h2>
+
+<% data.projects.each do |project| %>
+  <div class='project'>
+    <div class='screenshot'>
+      <a href='<%= project.url %>' target="_blank">
+        <%= image_tag project.screenshot %>
+      </a>
+    </div>
+    <div class='description'>
+      <h3><%= link_to project.name, project.url, target: '_blank' %></h3>
+      <% if project.source_link %>
+        <div class='source-link'><a href='<%= project.source_link %>'><i class='icon-github'></i><%= project.source_link.gsub(/http(s?):\/\/github.com\//, '') %></a></div>
+      <% end %>
+      <%= simple_format project.description %>
+    </div>
+  </div>
+<% end %>

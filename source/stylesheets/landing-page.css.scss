@@ -6,40 +6,15 @@
 @import "foundation/components/global";
 @import "foundation/components/panels";
 
-// Page-specific styles
-/*body.index {
-  nav.top-bar {
-    margin-bottom: 0px;
-  }
+.profile-row {
+  @include grid-row;
+  @include panel($bio-background-color);
 }
-
-.profile-wrapper {
-  width: 100%;
-  overflow: hidden;
-}*/
-
-/*.profile-content {
-  @include clearfix;
-}
-
-.profile-content:before {
-    content: "";
-    position: absolute;
-    background-image: url(http://upload.wikimedia.org/wikipedia/commons/thumb/0/06/AustinSkylineLouNeffPoint-2010-03-29-b.JPG/800px-AustinSkylineLouNeffPoint-2010-03-29-b.JPG);
-    background-color: #000;
-    background-position: center;
-    background-size: cover;
-    z-index: -1; /* Keep the background behind the content 
-    height: 20%; width: 20%;
-    @include scale(5, 5);
-    @include transform-origin(0px, 0px);
-    @include filter(blur(2px));
-}*/
 
 .profile {
   img {
-    @include border-radius(200px);
-    width: 200px;
+    @include border-radius($profile-image-size);
+    width: $profile-image-size;
     margin: 0 auto;
     display: block;
   }
@@ -47,6 +22,31 @@
 
 .bio {
   @include grid-column(8);
+
+  h2, h3, p {
+    color: $bio-foreground-color;
+  }
+}
+
+.featured-element-row {
+  @include grid-row;
+  margin-bottom: 50px;
+}
+
+section.latest-from-blog, section.featured-project {
+  h2 {
+    font-size: $featured-content-header-font-size;
+  }
+
+  h3 {
+    font-size: $featured-content-header-font-size - 0.4em;
+  }
+}
+
+section.featured-project {
+  img {
+    margin-left: $project-screenshot-left-margin;
+  }
 }
 
 @media only screen {
@@ -60,6 +60,11 @@
     @include grid-column(12);
     padding-top: 40px;
   }
+
+  section.latest-from-blog, section.featured-project {
+    @include grid-row;
+    @include grid-column(12);
+  }
 }
 
 @media only screen and (min-width: 768px) {
@@ -72,12 +77,7 @@
     padding-top: 0px;
   }
 
-  .blog-panel {
+  section.latest-from-blog, section.featured-project {
     @include grid-column(6);
-    @include panel;
-  }
-
-  .featured-project {
-
   }
 }

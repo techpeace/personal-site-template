@@ -20,7 +20,7 @@ activate :sprockets
 ####
 
 set :full_name, "Ada Lovelace"
-set :city, "Austin, Texas"
+set :city, "London, England"
 
 ###
 ## Social network link settings
@@ -102,6 +102,10 @@ page "humans.txt", :layout => false
 # page "/this-page-has-no-template.html", :proxy => "/template-file.html" do
 #   @which_fake_page = "Rendering a fake page with a variable"
 # end
+
+['portfolio', 'resume'].each do |proxied_page|
+  page proxied_page, :proxy => "#{proxied_page}.html"
+end
 
 ###
 # Helpers

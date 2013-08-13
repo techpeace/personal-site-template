@@ -1,3 +1,5 @@
+@import "foundation/variables";
+
 /* IE upgrade overlay */
 #ie-warning-overlay {
   position: absolute; 
@@ -126,6 +128,23 @@ aside {
   ul.tags li {
     display: inline;
   }
+}
+
+// Active menu selection.
+.top-bar-section ul li.active > a {
+  color: $primary-color;
+}
+
+body.portfolio {
+  .top-bar-section ul li.portfolio > a { color: $primary-color; }
+}
+
+body.resume {
+  .top-bar-section ul li.resume > a { color: $primary-color; }
+}
+
+body.blog {
+  .top-bar-section ul li.blog > a { color: $primary-color; }
 }
 
 .main {

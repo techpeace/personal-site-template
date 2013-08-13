@@ -12,13 +12,16 @@
 </div>
 
 <div class="featured-element-row">
-  <section class="latest-from-blug">
+  <section class="latest-from-blog">
     <h2>Latest from the blog</h2>
-    <p>Some content.</p>
+    <h3><%= link_to page_articles.last.title, page_articles.last %></h3>
+
+    <p><%= page_articles.last.summary %></p>
   </section>
 
   <section class="featured-project">
     <h2>Featured project</h2>
-    <p>Some content.</p>
+    <h3>MakerSquare</h3>
+    <%= image_tag 'project-screenshot.png' %>
   </section>
 </div>
