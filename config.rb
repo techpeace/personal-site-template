@@ -1,6 +1,7 @@
 require 'kramdown'
 require 'extensions/sitemap.rb'
 require 'zurb-foundation'
+require 'gravatar-ultimate'
 
 activate :sprockets
 
@@ -15,14 +16,35 @@ activate :sprockets
 #end
 
 ###
-## Blog settings
+## Profile settings
 ####
 
 set :full_name, "Ada Lovelace"
-set :hometown, "London, England"
-set :github_username, "ada"
+set :city, "Austin, Texas"
 
-Time.zone = "America/Los_Angeles"
+###
+## Social network link settings
+###
+
+# To hide one of these profile links, just set it to nil.
+
+# This is the id for your profile URL: https://plus.google.com/https://plus.google.com/110506932842622114536/
+set :google_plus_user_id, "110506932842622114536"
+# This is your shortname for your profile URL: http://facebook.com/ada.lovelace
+set :facebook_profile_name, "ada.lovelace"
+set :twitter_username, "ada"
+# This is your shortname for your profile URL: http://linkedin.com/in/adalovelace
+set :linkedin_profile_name, "adalovelace"
+set :dribbble_username, "adalovelace"
+set :github_username, "ada"
+set :gravatar_email_address, "me@adalovelace.com"
+
+Time.zone = "America/Chicago"
+
+
+###
+## Blog settings
+###
 
 activate :blog do |blog|
   blog.prefix = "/blog"
@@ -86,14 +108,30 @@ page "humans.txt", :layout => false
 ###
 
 # Automatic image dimensions on image_tag helper
-# activate :automatic_image_sizes
+activate :automatic_image_sizes
 
-# Methods defined in the helpers block are available in templates
-# helpers do
-#   def some_helper
-#     "Helping"
-#   end
-# end
+helpers do
+  # Generate the markup for a responsive social network link.
+  #
+  # network_name    - The String name of the social network, e.g. "Facebook".
+  # network_setting - The String variable set in this config file for the network,
+  #                   e.g. facebook_profile_name.
+  # url             - The String URL for the link.
+  #
+  # Returns the String markup.
+  def social_network_link(network_name, network_setting, url)
+    if facebook_profile_name
+      <<-MARKUP
+        <li>
+          <a href='#{url}'>
+            <span class='hide-for-medium-down'><i class='icon-#{network_name.downcase.gsub(' ', '-')}'></i>
+            </span><span class='show-for-medium-down'>#{network_name}</span>
+          </a>
+        </li>
+      MARKUP
+    end
+  end
+end
 
 # Generate sitemap after build
 activate :sitemap_generator 

@@ -1,0 +1,83 @@
+@import "compass/css3/border-radius";
+@import "compass/utilities/general/clearfix";
+@import "compass/css3/filter";
+@import "compass/css3/transform";
+@import "foundation/variables";
+@import "foundation/components/global";
+@import "foundation/components/panels";
+
+// Page-specific styles
+/*body.index {
+  nav.top-bar {
+    margin-bottom: 0px;
+  }
+}
+
+.profile-wrapper {
+  width: 100%;
+  overflow: hidden;
+}*/
+
+/*.profile-content {
+  @include clearfix;
+}
+
+.profile-content:before {
+    content: "";
+    position: absolute;
+    background-image: url(http://upload.wikimedia.org/wikipedia/commons/thumb/0/06/AustinSkylineLouNeffPoint-2010-03-29-b.JPG/800px-AustinSkylineLouNeffPoint-2010-03-29-b.JPG);
+    background-color: #000;
+    background-position: center;
+    background-size: cover;
+    z-index: -1; /* Keep the background behind the content 
+    height: 20%; width: 20%;
+    @include scale(5, 5);
+    @include transform-origin(0px, 0px);
+    @include filter(blur(2px));
+}*/
+
+.profile {
+  img {
+    @include border-radius(200px);
+    width: 200px;
+    margin: 0 auto;
+    display: block;
+  }
+}
+
+.bio {
+  @include grid-column(8);
+}
+
+@media only screen {
+  .profile {
+    @include grid-row;
+    @include grid-column(12);
+  }
+
+  .bio {
+    @include grid-row;
+    @include grid-column(12);
+    padding-top: 40px;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .profile {
+    @include grid-column(4);
+  }
+
+  .bio {
+    @include grid-column(8);
+    padding-top: 0px;
+  }
+
+  .blog-panel {
+    @include grid-column(6);
+    @include panel;
+  }
+
+  .featured-project {
+
+  }
+}

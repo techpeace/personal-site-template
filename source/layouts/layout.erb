@@ -33,7 +33,7 @@
 
     <%= yield_content :head %>
   </head>
-  <body>
+  <body class="<%= current_page.data.body_class || page_classes %>">
     
     <div id="root">  
       <!-- Logo & Top Nav -->
@@ -49,8 +49,38 @@
         <section class="top-bar-section">
         <!-- Left Nav Section -->
         <ul class="right">
+          <%= social_network_link(
+            'Google Plus',
+            google_plus_user_id,
+            "https://plus.google.com/#{google_plus_user_id}"
+            ) %>
+          <%= social_network_link(
+            'Facebook',
+            facebook_profile_name,
+            "http://facebook.com/#{facebook_profile_name}"
+            ) %>
+          <%= social_network_link(
+            'Twitter',
+            twitter_username,
+            "http://twitter.com/#{twitter_username}"
+            ) %>
+          <%= social_network_link(
+            'LinkedIn',
+            linkedin_profile_name,
+            "http://linkedin.com/in/#{ linkedin_profile_name}"
+          ) %>
+          <%= social_network_link(
+            'Dribble',
+            dribbble_username,
+            "http://dribble.com/#{dribbble_username}"
+          ) %>    
+          <%= social_network_link(
+            'Github',
+            github_username,
+            "http://github.com/#{github_username}"
+          ) %>
           <li class="divider"></li>
-          <li class="active"><a href="#">Portfolio</a></li>
+          <li><a href="#">Portfolio</a></li>
           <li class="divider"></li>
           <li><a href="#">Résumé</a></li>
           <li class="divider"></li>
@@ -61,8 +91,8 @@
 
       <!-- Main page container -->
 
-      <div class="row">
-        <div class="small-12 columns">
+      <div class="main">
+        <div class="content">
           <%= yield %>
         </div>
       </div>
@@ -71,8 +101,8 @@
 
     <!-- Footer -->
     <footer class="row" id="footer">
-      <div class="small-12 columns">
-        <p>Built with <i class="icon-heart"></i> in <%= hometown %> by <%= link_to full_name, "http://github.com/#{github_username}" %></p>
+      <div class="content">
+        <p>Built with <i class="icon-heart"></i> in <%= city %> by <%= link_to full_name, "http://github.com/#{github_username}" %></p>
       </div>
     </footer>
 

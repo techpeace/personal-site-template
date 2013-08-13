@@ -1,1 +1,24 @@
-Hello, I'm blah.
+<div class="profile-row">
+  <div class="profile">
+    <%= image_tag Gravatar.new(gravatar_email_address).image_url(size: 200) %>
+  </div>
+
+  <div class="bio">
+    <h2>Hello there! I'm <%= full_name %>.</h2>
+    <h3>I'm a full-stack web developer living in <%= city %>.</h3>
+    <!-- Short bio about yourself, your skills, whether you're looking for work or not, etc. -->
+    <p><%= lorem.sentences 5 %></p>
+  </div>
+</div>
+
+<div class="featured-element-row">
+  <section class="latest-from-blug">
+    <h2>Latest from the blog</h2>
+    <p>Some content.</p>
+  </section>
+
+  <section class="featured-project">
+    <h2>Featured project</h2>
+    <p>Some content.</p>
+  </section>
+</div>
