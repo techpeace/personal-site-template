@@ -20,8 +20,10 @@
   </section>
 
   <section class="featured-project">
+    <% project = data.projects.select(&:featured).first %>
+
     <h2>Featured project</h2>
-    <h3>MakerSquare</h3>
-    <%= image_tag 'project-screenshot.png' %>
+    <h3><%= link_to project.name, 'portfolio' %></h3>
+    <%= link_to(image_tag(project.screenshot), 'portfolio') %>
   </section>
 </div>

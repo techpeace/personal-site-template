@@ -4,6 +4,10 @@ This is a template for your own personal site including a portfolio, blog, and r
 
 ## Configuration
 
+### Resume
+
+### Social Networking Links
+
 ### Projects
 
 #### Taking Screenshots

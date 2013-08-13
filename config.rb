@@ -16,11 +16,13 @@ activate :sprockets
 #end
 
 ###
-## Profile settings
+## Site-wide settings
 ####
 
 set :full_name, "Ada Lovelace"
 set :city, "London, England"
+set :resume, nil # Set to filename of resume PDF in source directory.
+set :google_analytics_tracking_id, "UA-111111111-11"
 
 ###
 ## Social network link settings
@@ -45,6 +47,8 @@ Time.zone = "America/Chicago"
 ###
 ## Blog settings
 ###
+
+set :disqus_shortname, "adas-blog"
 
 activate :blog do |blog|
   blog.prefix = "/blog"
