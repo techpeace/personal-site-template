@@ -17,7 +17,7 @@
     <meta http-equiv="cleartype" content="on">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 
-    <title><%= full_name + ' | ' + data.page.title || full_name %></title>
+    <title><%= data.page.title ? full_name + ' | ' + data.page.title : full_name %></title>
 
     <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.0/css/font-awesome.min.css" media="screen" rel="stylesheet" type="text/css" />
     <%= stylesheet_link_tag "application" %>
