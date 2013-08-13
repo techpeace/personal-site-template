@@ -4,6 +4,10 @@ This is a template for your own personal site including a portfolio, blog, and r
 
 ## Configuration
 
+### Projects
+
+#### Taking Screenshots
+
 ### Disqus integration (for blog)
 
 ### Google Analytics integration
@@ -22,6 +26,13 @@ This template is still a good starting point for sites that don't require bloggi
 4. Remove blog-related styles from source/stylesheets/base.css.scss. They are all at the bottom of the file grouped together under the header "Blog Articles".
 5. Remove blog-related settings from config.rb. They are all grouped at the top under the header "Blog Settings".
 6. Remove the link to the blog in the markup for the navbar (in `layouts/layout.erb`).
+7. Remove the `section.latest-from-blog` element from the markup in `index.html.erb`, and remove the following code from `landing-page.css.scss`:
+
+```scss
+section.latest-from-blog, section.featured-project {
+  @include grid-column(6);
+}
+```
 
 http://middlemanapp.com/blogging/
 

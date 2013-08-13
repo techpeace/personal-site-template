@@ -140,6 +140,11 @@ end
 # Generate sitemap after build
 activate :sitemap_generator 
 
+# Enable syntax highlighting
+set :markdown_engine, :redcarpet
+set :markdown, :fenced_code_blocks => true, :smartypants => true
+activate :syntax
+
 set :css_dir, 'stylesheets'
 set :js_dir, 'javascripts'
 set :images_dir, 'images'
@@ -159,7 +164,7 @@ configure :build do
   # Compress PNGs after build
   # First: gem install middleman-smusher
   # require "middleman-smusher"
-  # activate :smusher
+  activate :smusher
 
   # Or use a different image path
   # set :http_path, "/Content/images/"

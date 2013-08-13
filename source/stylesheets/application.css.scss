@@ -10,6 +10,7 @@
 // ====||============================
 
 $active-menu-selection-color: $primary-color;
+$code-font: "Lucida Console", Monaco, monospace;
 $project-screenshot-left-margin: -22px;
 
 // ----||----------------------------
@@ -23,5 +24,6 @@ $featured-content-header-font-size: 1.6em;
 
 
 @import "base";
+@import "syntax";
 @import "landing-page";
 @import "portfolio";
