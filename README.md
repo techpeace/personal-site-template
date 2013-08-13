@@ -64,11 +64,11 @@ Create a Disqus account for your blog, and set the `disqus_shortname` variable i
 
 Create a Google Analytics account, and set the `google_analytics_tracking_id` appropriately.
 
-### Blogging
+## Blogging
 
 Refer to [the middleman-blog docs](http://middlemanapp.com/blogging/) for information on using the blog.
 
-#### Removing blog functionality
+### Removing blog functionality
 
 This template is still a good starting point for sites that don't require blogging functions. To remove blog-specific stuff:
 
