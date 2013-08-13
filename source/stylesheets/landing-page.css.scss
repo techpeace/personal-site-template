@@ -2,9 +2,13 @@
 @import "compass/utilities/general/clearfix";
 @import "compass/css3/filter";
 @import "compass/css3/transform";
-@import "foundation/variables";
-@import "foundation/components/global";
-@import "foundation/components/panels";
+@import "foundation_and_overrides";
+
+$bio-background-color: $primary-color;
+$bio-foreground-color: #000;
+$profile-image-size: 200px;
+$featured-content-header-font-size: 1.6em;
+$project-screenshot-left-margin: -22px;
 
 .profile-row {
   @include grid-row;

@@ -1,7 +1,9 @@
+@import "foundation_and_overrides";
+
 <%= Rouge::Themes::Github.render(:scope => '.highlight') %>
 
 pre.highlight {
-  font-family: $code-font;
+  font-family: $code-font-family;
   padding: 20px;
   margin-bottom: 20px;
 }

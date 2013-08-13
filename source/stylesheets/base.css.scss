@@ -1,4 +1,7 @@
-@import "foundation/variables";
+@import "foundation_and_overrides";
+@import "compass/layout/sticky-footer";
+
+$active-menu-selection-color: $primary-color;
 
 /* IE upgrade overlay */
 #ie-warning-overlay {

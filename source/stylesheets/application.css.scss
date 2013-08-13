@@ -2,27 +2,6 @@
 @import "compass/layout";
 @import "compass/layout/sticky-footer";
 @import "foundation_and_overrides";
-
-
-
-// ----||----------------------------
-//     || SITE-WIDE
-// ====||============================
-
-$active-menu-selection-color: $primary-color;
-$code-font: "Lucida Console", Monaco, monospace;
-$project-screenshot-left-margin: -22px;
-
-// ----||----------------------------
-//     || LANDING PAGE
-// ====||============================
-
-$bio-background-color: $primary-color;
-$bio-foreground-color: #000;
-$profile-image-size: 200px;
-$featured-content-header-font-size: 1.6em;
-
-
 @import "base";
 @import "syntax";
 @import "landing-page";

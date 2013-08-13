@@ -74,6 +74,15 @@ end
 page "/blog/feed.xml", :layout => false
 
 ###
+# Deployment settings
+###
+
+activate :deploy do |deploy|
+  deploy.method = :git
+  deploy.branch = "master"
+end
+
+###
 # Compass
 ###
 

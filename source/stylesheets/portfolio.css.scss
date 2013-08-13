@@ -1,3 +1,7 @@
+@import "foundation_and_overrides";
+
+$project-screenshot-left-margin: -22px;
+
 .project {
   @include grid-row;
   margin-bottom: 30px;
