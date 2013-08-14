@@ -116,10 +116,6 @@ page "humans.txt", :layout => false
 #   @which_fake_page = "Rendering a fake page with a variable"
 # end
 
-['portfolio'].each do |proxied_page|
-  page proxied_page, :proxy => "#{proxied_page}.html"
-end
-
 ###
 # Helpers
 ###
