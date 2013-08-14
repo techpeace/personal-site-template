@@ -137,8 +137,8 @@ helpers do
       <<-MARKUP
         <li>
           <a href='#{url}'>
-            <span class='hide-for-medium-down'><i class='icon-#{network_name.downcase.gsub(' ', '-')}'></i>
-            </span><span class='show-for-medium-down'>#{network_name}</span>
+            <span class='hide-for-small'><i class='icon-#{network_name.downcase.gsub(' ', '-')}'></i>
+            </span><span class='show-for-small'>#{network_name}</span>
           </a>
         </li>
       MARKUP
