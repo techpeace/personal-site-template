@@ -3,6 +3,8 @@
 
 $active-menu-selection-color: $primary-color;
 
+@import "theme";
+
 /* IE upgrade overlay */
 #ie-warning-overlay {
   position: absolute; 

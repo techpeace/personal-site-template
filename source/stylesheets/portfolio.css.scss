@@ -2,6 +2,8 @@
 
 $project-screenshot-left-margin: -22px;
 
+@import "theme";
+
 .project {
   @include grid-row;
   margin-bottom: 30px;

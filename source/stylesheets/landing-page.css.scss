@@ -10,6 +10,8 @@ $profile-image-size: 200px;
 $featured-content-header-font-size: 1.6em;
 $project-screenshot-left-margin: -22px;
 
+@import "theme";
+
 .profile-row {
   @include grid-row;
   @include panel($bio-background-color);

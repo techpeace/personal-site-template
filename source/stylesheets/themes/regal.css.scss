@@ -1,0 +1,88 @@
+@import "compass/css3";
+@import "web-fonts";
+
+// Google Fonts
+@include web-font((Raleway), (500));
+@include web-font((Varela Round), (400));
+
+// ----||--------------------------
+//     || VARIABLE OVERRIDES
+// ====||==========================
+
+// Colors
+$background-color: #fff;
+$foreground-color: #0d1111;
+$secondary-color: #1abc9c;
+$border-color: rgb(230, 230, 230);
+$primary-color: $secondary-color;
+
+// Site-wide settings
+$body-font-color: $foreground-color;
+$body-font-color: $foreground-color;
+$body-font-family: 'Raleway', sans-serif;
+$body-font-weight: 500;
+
+$header-font-family: 'Raleway', sans-serif;
+$header-font-weight: 400;
+$header-font-color: $foreground-color;
+
+// Background color for the top bar
+$topbar-bg: $background-color;
+
+// Height and margin for the top bar
+$topbar-height: 80px;
+
+// Top bar dropdown elements
+$topbar-dropdown-bg: $background-color;
+$topbar-dropdown-link-color: $primary-color;
+
+// Link colors and styles for top-level nav
+$topbar-link-color: $foreground-color;
+$topbar-link-color-hover: $foreground-color;
+$topbar-link-color-active: $foreground-color;
+$topbar-dropdown-label-color: $secondary-color;
+
+// Top menu icon styles
+$topbar-menu-link-font-size: emCalc(15px);
+$topbar-menu-link-color: $secondary-color;
+$topbar-menu-icon-color: $secondary-color;
+
+.top-bar-section ul li > a {
+  @include transition-duration(0.25s);
+  @include transition-timing-function(ease-in);
+
+  &:hover {
+    color: $secondary-color;
+  } 
+}
+
+body {
+  border-top-color: $secondary-color;
+  border-top-style: solid;
+  border-top-width: 4px;
+}
+
+// ----||--------------------------
+//     || LANDING PAGE
+// ====||==========================
+
+$bio-background-color: #fff;
+
+
+// ----||--------------------------
+//     || PORTFOLIO
+// ====||==========================
+
+.project {
+  padding: 40px 0px;
+  margin-bottom: 0px;
+  border-bottom: 1px solid $border-color;
+
+  &:last-child {
+    border-bottom: none;
+  }
+}
+
+aside {
+  border-left: 1px solid $border-color;
+}

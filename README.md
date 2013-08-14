@@ -76,6 +76,10 @@ Create a Disqus account for your blog, and set the `disqus_shortname` variable i
 
 Create a Google Analytics account, and set the `google_analytics_tracking_id` appropriately.
 
+## Theming
+
+Choose a theme [from the wiki], then uncomment the line with that theme's name in `source/stylesheets/theme.css.scss`. If you would like to create your own theme, you can use `source/stylesheets/themes/template.css.scss` as a guide. Create a new file in `source/stylesheets/themes` with the name of your theme, then add a line to `source/stylesheets/theme.css.scss` to incorporate it. Be sure to send a pull request if it's awesome!
+
 ## Blogging
 
 Refer to [the middleman-blog docs](http://middlemanapp.com/blogging/) for information on using the blog.

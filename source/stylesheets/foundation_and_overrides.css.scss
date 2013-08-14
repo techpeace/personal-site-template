@@ -1270,6 +1270,8 @@ $topbar-media-query: "only screen and (min-width: #{$topbar-breakpoint})";
 
 // $topbar-sticky-class: ".sticky";
 
+@import "theme";
+
 // Import all of foundation css
 @import "foundation";
 

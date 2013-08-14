@@ -1,0 +1,114 @@
+// Use this as a scaffold for creating your own themes!
+
+// ----||--------------------------
+//     || VARIABLES
+// ====||==========================
+
+// Override any foundation variables (from foundation_and_overrides.css.scss) here.
+
+// ----||--------------------------
+//     || LANDING PAGE
+// ====||==========================
+
+// $bio-background-color: $primary-color;
+// $bio-foreground-color: #000;
+// $profile-image-size: 200px;
+// $featured-content-header-font-size: 1.6em;
+// $project-screenshot-left-margin: -22px;
+
+.profile-row {
+}
+
+.profile {
+  img {
+  }
+}
+
+.bio {
+
+  h2, h3, p {
+  }
+}
+
+.featured-element-row {
+}
+
+section.latest-from-blog, section.featured-project {
+  h2 {
+  }
+
+  h3 {
+  }
+}
+
+section.featured-project {
+  img {
+  }
+}
+
+// ----||--------------------------
+//     || PORTFOLIO
+// ====||==========================
+
+// $project-screenshot-left-margin: -22px;
+
+.project {
+
+  .screenshot {
+
+    img {
+    }
+  }
+
+  .description {
+    h3 {
+    }
+
+    p {
+    }
+
+    .source-link {
+
+      i {
+      }
+
+      a {
+
+        &:hover {
+        }
+      }
+    }
+  }
+}
+
+// ----||--------------------------
+//     || BLOG
+// ====||==========================
+
+/* Blog articles */
+div.articles {
+  hr {
+  }
+}  
+
+ul.read_next {                
+  li { 
+    a {
+    }
+    &:last-child {
+    }
+  }
+}
+
+aside {
+  ul {
+  }
+
+  ul.credit{
+    time {
+    }
+  }
+
+  ul.tags li {
+  }
+}
