@@ -107,6 +107,14 @@ bundle exec middleman build
 bundle exec middleman deploy
 ```
 
+## Keeping things up to date
+
+If you want to keep up to date with the latest changes to the [base template](http://github.com/makersquare/personal-site-template), start by making sure your repo's stage is clean, then run the following:
+
+```console
+git pull upstream master
+```
+
 ## Using a custom domain name
 
 Create a file `source/CNAME` containing your domain name:
