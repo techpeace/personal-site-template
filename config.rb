@@ -133,7 +133,7 @@ helpers do
   #
   # Returns the String markup.
   def social_network_link(network_name, network_setting, url)
-    if facebook_profile_name
+    if network_setting
       <<-MARKUP
         <li>
           <a href='#{url}'>
