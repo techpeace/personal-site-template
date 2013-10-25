@@ -65,7 +65,7 @@ You can highlight your projects with the portfolio section of the site. Use the 
 
 ##### Taking Screenshots
 
-Use Safari to view a live version of your project. Press command-shift-4-space, then click on the Safari window to save a screenshot to the Desktop. Now open the screenshot in Preview, and resize the image to 50% of its original size. Now drop the image file into `source/images`.
+You can use [the screenshotter gem](https://github.com/ctide/screenshotter) to take screenshots of your projects. If you prefer to do it manually, then use Safari to view a live version of your project. Press command-shift-4-space, then click on the Safari window to save a screenshot to the Desktop. Now open the screenshot in Preview, and resize the image to 50% of its original size. Now drop the image file into `source/images`.
 
 
 #### Disqus integration (for blog)
