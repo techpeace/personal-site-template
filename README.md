@@ -82,7 +82,7 @@ Choose a theme [from the wiki](https://github.com/makersquare/personal-site-temp
 
 ## Blogging
 
-Refer to [the middleman-blog docs](http://middlemanapp.com/blogging/) for information on using the blog.
+Refer to [the middleman-blog docs](http://middlemanapp.com/basics/blogging/) for information on using the blog.
 
 ### Removing blog functionality
 
