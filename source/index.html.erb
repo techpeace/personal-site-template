@@ -23,7 +23,7 @@
     <% project = data.projects.select(&:featured).first %>
 
     <h2>Featured project</h2>
-    <h3><%= link_to project.name, 'portfolio' %></h3>
-    <%= link_to(image_tag(project.screenshot), 'portfolio') %>
+    <h3><%= link_to project.name, 'portfolio.html' %></h3>
+    <%= link_to(image_tag(project.screenshot), 'portfolio.html') %>
   </section>
 </div>
