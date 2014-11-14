@@ -11,11 +11,11 @@ task :setup_github_pages, :repo do |t, args|
     puts "           or 'https://github.com/your_username/your_username.github.io')"
     repo_url = get_stdin("Repository url: ")
   end
-  protocol = (repo_url.match(/(^git)@/).nil?) ? 'https' : 'git'
-  if protocol == 'git'
-    user = repo_url.match(/:([^\/]+)/)[1]
-  else
+  protocol = repo_url.match(/^https:/).nil? ? 'git' : 'https'
+  if protocol == 'https'
     user = repo_url.match(/github\.com\/([^\/]+)/)[1]
+  else
+    user = repo_url.match(/:([^\/]+)/)[1]
   end
 
   unless (`git remote -v` =~ /origin.+?makersquare(?:\.git)?/).nil?
