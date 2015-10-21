@@ -4,9 +4,21 @@ This is a template for your own personal site including a portfolio, blog, and r
 
 ## Installation
 
-**NOTE:** The following instructions assume that you'll be using GitHub Pages personal sites as your host. You'll want to go ahead and clone down your personal site repo first, and then delete it from GitHub. Now go ahead and create a new one (username.github.io).
+### Prepare GitHub
 
-Go ahead and grab a copy of the code for the site and install the bundle:
+**NOTE:** The following instructions assume that you'll be using GitHub Pages personal sites as your host. 
+
+**NOTE:** If you are starting completely from scratch with GitHub Pages, skip to Step 3.
+
+1. Clone your existing website repo (if you already have one). 
+2. Delete the existing repo from GitHub.
+3. Create a repo, with the name `username.github.io`. 
+
+**NOTE:** Even if you are going to use a custom domain name (CNAME) for your new personal site, you still need to create the repo with the name `username.github.io`. The rake task relies on this name format to configure the site correctly. 
+
+### Copy the Site Code
+
+Clone the site code to your local working directory.
 
 ```console
 git clone https://github.com/makersquare/personal-site-template.git username.github.io
@@ -14,19 +26,27 @@ cd username.github.io
 bundle install
 ```
 
-If you haven't already, create your personal site repo on GitHub (be sure it has the name username.github.io, where username is your GitHub username. Now run the following setup rake task:
+Run the rake task to set up the repository.
 
 ```console
 bundle exec rake setup_github_pages
 ```
 
-It will ask you to paste in the git URL for your personal site repo. Personal sites use the master branch, so this rake task will rename your master branch to source. Go ahead and push up the code for your site:
+When prompted by the rake task, paste the full GitHub URL for your personal site repo. 
+
+```console
+https://github.com/username/username.github.io
+```
+
+**NOTE:** Personal sites use the master branch by default, therefore the rake task will rename your master branch to source. 
+
+Commit and push the refactored repository to your GitHub Pages repository.
 
 ```console
 git push origin source
 ```
 
-Now generate and deploy the site:
+Generate and deploy the site:
 
 ```console
 bundle exec middleman build
@@ -67,7 +87,6 @@ You can highlight your projects with the portfolio section of the site. Use the 
 
 You can use [the screenshotter gem](https://github.com/ctide/screenshotter) to take screenshots of your projects. If you prefer to do it manually, then use Safari to view a live version of your project. Press command-shift-4-space, then click on the Safari window to save a screenshot to the Desktop. Now open the screenshot in Preview, and resize the image to 50% of its original size. Now drop the image file into `source/images`.
 
-
 #### Disqus integration (for blog)
 
 Create a Disqus account for your blog, and set the `disqus_shortname` variable in `config.rb` to the shortname for your blog.
@@ -78,7 +97,17 @@ Create a Google Analytics account, and set the `google_analytics_tracking_id` ap
 
 ## Theming
 
-Choose a theme [from the wiki](https://github.com/makersquare/personal-site-template/wiki/Themes), then uncomment the line with that theme's name in `source/stylesheets/theme.css.scss`. If you would like to create your own theme, you can use `source/stylesheets/themes/template.css.scss` as a guide. Create a new file in `source/stylesheets/themes` with the name of your theme, then add a line to `source/stylesheets/theme.css.scss` to incorporate it. Be sure to send a pull request if it's awesome!
+To use an existing theme:
+
+1. Choose a theme [from the wiki](https://github.com/makersquare/personal-site-template/wiki/Themes)
+2. Uncomment the line with that theme's name in `source/stylesheets/theme.css.scss`. 
+
+To create your own theme:
+
+1. Use `source/stylesheets/themes/template.css.scss` as a guide.
+2. Create a new file in `source/stylesheets/themes` with the name of your theme
+3. Add a line to `source/stylesheets/theme.css.scss` to incorporate it. 
+4. Send a pull request if it's awesome!
 
 ## Blogging
 
